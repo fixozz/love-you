@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 NOT FOUND</title>
+  <style>
+    /* Mobile-first layout */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+    }
+
+    img.only-center {
+      display: block;
+      margin: 2rem auto;        /* top/bottom margin */
+      max-width: 90%;           /* phone screen-size */
+      height: auto;
+    }
+
+    .footer-button-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .footer-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #0077cc;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .footer-btn:hover,
+    .footer-btn:focus {
+      background: #005fa3;
+      outline: none;
+    }
+
+    .video-box {
+      display: none;
+      text-align: center;
+      margin: 1rem auto;
+    }
+    .video-box video {
+      max-width: 95%;
+      border-radius: 8px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="only-center" src="404.jpg" alt="super po">
+
+  <div class="footer-button-wrap">
+    <button class="footer-btn" onclick="playVideo()">refresh</button>
+  </div>
+
+  <div id="videoBox" class="video-box">
+    <video id="myVideo" controls>
+      <source src="monkey.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 Site — crafted by fixozz_sri</p>
+  </footer>
+
+  <script>
+    function playVideo() {
+      const box = document.getElementById('videoBox');
+      const vid = document.getElementById('myVideo');
+      box.style.display = 'block';
+      vid.play();
+    }
+  </script>
+</body>
+</html>
